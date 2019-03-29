@@ -5,6 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
+import com.example.gamebacklog.Control.Game;
 import com.example.gamebacklog.Control.GameDao;
 
 @Database(entities = {Game.class}, version = 1, exportSchema = false)

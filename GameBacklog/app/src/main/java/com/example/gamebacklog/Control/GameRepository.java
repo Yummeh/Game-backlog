@@ -1,9 +1,9 @@
-package com.example.gamebacklog.Model;
+package com.example.gamebacklog.Control;
 
 import android.arch.lifecycle.LiveData;
 import android.content.Context;
 
-import com.example.gamebacklog.Control.GameDao;
+import com.example.gamebacklog.Model.GameRoomDatabase;
 
 import java.util.List;
 import java.util.concurrent.Executor;
@@ -48,6 +48,16 @@ public class GameRepository {
 			@Override
 			public void run() {
 				mGameDao.deleteGame(game);
+			}
+		});
+	}
+	
+	public void deleteAll(final List<Game> games) {
+		mExecutor.execute(new Runnable() {
+			@Override
+			public void run() {
+				mGameDao.deleteAllGames(games);
+				
 			}
 		});
 	}

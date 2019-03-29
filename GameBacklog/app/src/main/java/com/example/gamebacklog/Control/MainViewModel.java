@@ -1,4 +1,4 @@
-package com.example.gamebacklog.Model;
+package com.example.gamebacklog.Control;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
@@ -32,5 +32,9 @@ public class MainViewModel extends AndroidViewModel {
 	
 	public void delete(Game game) {
 		mRepository.delete(game);
+	}
+	
+	public void deleteAll(List<Game> games) {
+		mRepository.deleteAll(games);
 	}
 }
